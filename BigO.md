@@ -91,4 +91,34 @@ The notation is: `O(a + b)` because according to the rule, different inputs shou
 
 > If two loops are one after the other + is used, if two loops are nested together * is used to denote them
 
+<br>
 
+When you see a problem where the number of elements in the
+problem space gets halved each time, that will likely be a 0( log N) runtime.
+This is the same reason why finding an element in a balanced binary search tree is O ( log N). With each
+comparison, we go either left or right. Half the nodes are on each side, so we cut the problem space in half
+each time. 
+
+<br>
+
+> The base of log does not matter for the purpose of Big O.
+
+> The base of an exponent matters if you Compare 2<sup>n</sup> and 8<sup>n</sup>. If you expand 8<sup>n</sup>, you get (2<sup>3</sup>)<sup>n</sup>, which equals 2<sup>2n</sup> * 2<sup>n</sup> 
+ As you can see,  and 2<sup>n</sup> and 8<sup>n</sup> are different
+ 
+ <br>
+
+   ```java
+
+boolean isPrime(int n) 
+{ 
+ for (int x = 2; x <= sqrt(n); x++) {
+	 if (n % X == 0) { 
+		 return false;
+	} 
+} 
+ return true;
+ }
+
+```
+This runs on O(sqrt(n)) times
